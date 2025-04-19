@@ -6,4 +6,4 @@ This repository hosts a simple website published on GitHub Pages.
 
 ## Website
 
-Visit the website at: https://realworldbuilder.github.io/constructionAI/ 
+Visit the website at: https://realworldbuilder.github.io/constructionAI/
