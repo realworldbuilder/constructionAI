@@ -1,31 +1,618 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Construction AI</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1 {
-            color: #333;
-        }
-        .container {
-            margin-top: 30px;
-        }
-    </style>
+  <title>will hsu - constructionai</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #4B9CD3; /* Carolina blue */
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      text-transform: lowercase;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #4B9CD3;
+    }
+    
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 5px;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style-type: none;
+    }
+    
+    nav ul li {
+      margin-left: 20px;
+    }
+    
+    nav ul li a {
+      color: #4B9CD3;
+      text-decoration: none;
+      position: relative;
+      padding: 5px 0;
+    }
+    
+    nav ul li a:hover {
+      color: #7FB5DB; /* Lighter Carolina blue */
+    }
+    
+    nav ul li a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: #4B9CD3;
+      transition: width 0.3s;
+    }
+    
+    nav ul li a:hover:after {
+      width: 100%;
+    }
+    
+    .hero {
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-content {
+      text-align: center;
+      z-index: 2;
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      letter-spacing: 8px;
+    }
+    
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: transparent;
+      border: 1px solid #4B9CD3;
+      color: #4B9CD3;
+      text-decoration: none;
+      letter-spacing: 2px;
+      transition: all 0.3s;
+      margin: 10px;
+    }
+    
+    .btn:hover {
+      background-color: #4B9CD3;
+      color: #000;
+    }
+    
+    .matrix-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      z-index: 1;
+      overflow: hidden;
+    }
+    
+    .ascii-art {
+      white-space: pre;
+      font-size: 10px;
+      line-height: 10px;
+      opacity: 0.8;
+    }
+    
+    .falling-chars {
+      position: absolute;
+      color: #4B9CD3;
+      font-size: 16px;
+      opacity: 0;
+      animation: fall 8s linear infinite;
+    }
+    
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(1000px);
+        opacity: 0;
+      }
+    }
+    
+    .section-title {
+      font-size: 36px;
+      letter-spacing: 5px;
+      text-align: center;
+      margin: 60px 0 30px;
+    }
+    
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 30px 0;
+    }
+    
+    .about-text {
+      line-height: 1.8;
+      font-size: 16px;
+    }
+    
+    .connect-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 30px 0;
+    }
+    
+    .connect-link {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border: 1px solid #4B9CD3;
+      transition: all 0.3s;
+    }
+    
+    .connect-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(75, 156, 211, 0.3);
+    }
+    
+    .connect-link span {
+      margin-left: 10px;
+    }
+    
+    .focus-areas {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      padding: 30px 0;
+    }
+    
+    .focus-card {
+      border: 1px solid #4B9CD3;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    
+    .focus-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .focus-card h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+    
+    .focus-card p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    .focus-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, transparent 65%, #4B9CD3 70%, transparent 75%);
+      opacity: 0.2;
+      transition: all 1s;
+      transform: translateX(-100%);
+    }
+    
+    .focus-card:hover::before {
+      transform: translateX(100%);
+    }
+    
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      padding: 30px 0;
+    }
+    
+    .project-card {
+      border: 1px solid #4B9CD3;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .project-card h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+    
+    .project-card ul {
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+    
+    .project-card li {
+      margin-bottom: 10px;
+    }
+    
+    .project-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, transparent 65%, #4B9CD3 70%, transparent 75%);
+      opacity: 0.2;
+      transition: all 1s;
+      transform: translateX(-100%);
+    }
+    
+    .project-card:hover::before {
+      transform: translateX(100%);
+    }
+    
+    .why-follow {
+      padding: 40px;
+      border: 1px solid #4B9CD3;
+      margin: 30px 0;
+      line-height: 1.8;
+    }
+    
+    footer {
+      border-top: 1px solid #4B9CD3;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+    
+    .ascii-border {
+      padding: 10px;
+      margin: 20px 0;
+      border: 1px solid #4B9CD3;
+      font-size: 10px;
+      line-height: 10px;
+      overflow-x: auto;
+    }
+    
+    .glitch {
+      animation: glitch 2s linear infinite;
+    }
+    
+    @keyframes glitch {
+      0% {
+        transform: none;
+        opacity: 1;
+      }
+      7% {
+        transform: skew(-0.5deg, -0.9deg);
+        opacity: 0.75;
+      }
+      10% {
+        transform: none;
+        opacity: 1;
+      }
+      27% {
+        transform: none;
+        opacity: 1;
+      }
+      30% {
+        transform: skew(0.8deg, -0.1deg);
+        opacity: 0.75;
+      }
+      35% {
+        transform: none;
+        opacity: 1;
+      }
+      52% {
+        transform: none;
+        opacity: 1;
+      }
+      55% {
+        transform: skew(-1deg, 0.2deg);
+        opacity: 0.75;
+      }
+      50% {
+        transform: none;
+        opacity: 1;
+      }
+      72% {
+        transform: none;
+        opacity: 1;
+      }
+      75% {
+        transform: skew(0.4deg, 1deg);
+        opacity: 0.75;
+      }
+      80% {
+        transform: none;
+        opacity: 1;
+      }
+      100% {
+        transform: none;
+        opacity: 1;
+      }
+    }
+
+    .icon {
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    .emoji {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .connect-links, .focus-areas, .projects {
+        grid-template-columns: 1fr;
+      }
+      
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      nav ul {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 5px 10px;
+      }
+      
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Construction AI</h1>
-    <div class="container">
-        <p>Welcome to Construction AI - a project combining construction expertise with artificial intelligence.</p>
-        <p>More content coming soon!</p>
+  <div class="container">
+    <header>
+      <div class="logo glitch">construct//matrix</div>
+      <nav>
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">projects</a></li>
+          <li><a href="#">focus</a></li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <div class="hero">
+      <div class="matrix-bg" id="matrix-bg"></div>
+      <div class="hero-content">
+        <h1 class="glitch">construction ai</h1>
+        <p>welcome! i'm <span style="color: #7FB5DB;">will hsu</span>, a chartered quantity surveyor deeply passionate about applying <strong>data analytics</strong> and <strong>artificial intelligence</strong> to the construction industry.</p>
+        <div>
+          <a href="#projects" class="btn">explore projects</a>
+          <a href="#connect" class="btn">connect</a>
+        </div>
+      </div>
     </div>
+    
+    <div class="ascii-border">
+      <div class="ascii-art">
+     ██████╗ ██████╗ ███╗   ██╗███████╗████████╗██████╗ ██╗   ██╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗     █████╗ ██╗
+    ██╔════╝██╔═══██╗████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║   ██║██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║    ██╔══██╗██║
+    ██║     ██║   ██║██╔██╗ ██║███████╗   ██║   ██████╔╝██║   ██║██║        ██║   ██║██║   ██║██╔██╗ ██║    ███████║██║
+    ██║     ██║   ██║██║╚██╗██║╚════██║   ██║   ██╔══██╗██║   ██║██║        ██║   ██║██║   ██║██║╚██╗██║    ██╔══██║██║
+    ╚██████╗╚██████╔╝██║ ╚████║███████║   ██║   ██║  ██║╚██████╔╝╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║    ██║  ██║██║
+     ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝  ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝    ╚═╝  ╚═╝╚═╝
+      </div>
+    </div>
+    
+    <section class="about-section">
+      <p class="about-text">
+        here, you'll find a collection of cutting-edge ai initiatives, each aiming to redefine how we approach construction and project management. my work explores the powerful synergy between <strong>construction expertise</strong> and <strong>machine learning</strong>—turning concepts into scalable, production-ready solutions.
+      </p>
+    </section>
+    
+    <div class="section-title" id="connect">🌐 let's connect</div>
+    
+    <div class="connect-links">
+      <a href="#" target="_blank" class="connect-link">
+        <span class="icon">🌍</span>
+        <span>website: willhsu.dev</span>
+      </a>
+      <a href="#" target="_blank" class="connect-link">
+        <span class="icon">📝</span>
+        <span>blog: all blog posts</span>
+      </a>
+      <a href="#" target="_blank" class="connect-link">
+        <span class="icon">👔</span>
+        <span>linkedin: personal profile</span>
+      </a>
+      <a href="#" target="_blank" class="connect-link">
+        <span class="icon">🔗</span>
+        <span>github: @willhsu</span>
+      </a>
+      <a href="#" target="_blank" class="connect-link">
+        <span class="icon">📺</span>
+        <span>youtube channel: tech builds</span>
+      </a>
+    </div>
+    
+    <div class="section-title">📌 my focus areas</div>
+    
+    <div class="focus-areas">
+      <div class="focus-card">
+        <h3><span class="emoji">📊</span>data analytics for construction</h3>
+        <p>transforming raw data into actionable insights. leveraging construction data to identify patterns, optimize processes, and drive better decision-making.</p>
+      </div>
+      <div class="focus-card">
+        <h3><span class="emoji">🧠</span>machine learning & ai integration</h3>
+        <p>developing algorithms tailored for construction applications. creating intelligent systems that learn from past projects to improve future outcomes.</p>
+      </div>
+      <div class="focus-card">
+        <h3><span class="emoji">⚙️</span>optimization & scalability</h3>
+        <p>ensuring ai solutions are not just innovative but production-ready. building systems that scale effectively across different project sizes and types.</p>
+      </div>
+      <div class="focus-card">
+        <h3><span class="emoji">🔄</span>open-source large language models</h3>
+        <p>exploring and expanding the boundaries of llms in construction. adapting language models to understand construction terminology and contexts.</p>
+      </div>
+    </div>
+    
+    <div class="ascii-border">
+      <div class="ascii-art">
+      ██████╗  █████╗ ███████╗███████╗██████╗      █████╗ ███████╗    ███████╗██╗   ██╗ ██████╗██╗  ██╗
+      ██╔══██╗██╔══██╗██╔════╝██╔════╝██╔══██╗    ██╔══██╗██╔════╝    ██╔════╝██║   ██║██╔════╝██║ ██╔╝
+      ██████╔╝███████║███████╗█████╗  ██║  ██║    ███████║█████╗      █████╗  ██║   ██║██║     █████╔╝ 
+      ██╔══██╗██╔══██║╚════██║██╔══╝  ██║  ██║    ██╔══██║██╔══╝      ██╔══╝  ██║   ██║██║     ██╔═██╗ 
+      ██████╔╝██║  ██║███████║███████╗██████╔╝    ██║  ██║██║         ██║     ╚██████╔╝╚██████╗██║  ██╗
+      ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚═════╝     ╚═╝  ╚═╝╚═╝         ╚═╝      ╚═════╝  ╚═════╝╚═╝  ╚═╝
+      </div>
+    </div>
+    
+    <div class="section-title" id="projects">🛠️ featured projects</div>
+    
+    <div class="projects">
+      <div class="project-card">
+        <h3><span class="emoji">📈</span>rag chatbot development</h3>
+        <ul>
+          <li>leveraging retrieval-augmented generation (rag) techniques to create intelligent, contextually aware chatbots.</li>
+          <li><strong>key focus</strong>: enhancing user interaction in construction management software.</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <h3><span class="emoji">🧠</span>finetuning large language models</h3>
+        <ul>
+          <li>customizing open-source llms to handle construction-specific language and queries.</li>
+          <li><strong>scalability</strong>: deploying these models on a large scale for robust field applicability.</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <h3><span class="emoji">🌐</span>crawl4ai - web scraping framework</h3>
+        <ul>
+          <li>a comprehensive web scraping tool built with streamlit to gather essential construction data.</li>
+          <li><strong>showcased in</strong>: youtube video (explaining the code, components, and deployment details)</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <h3><span class="emoji">🎙️</span>podcast creation with ai</h3>
+        <ul>
+          <li>combining nlp and audio processing to automate podcast production on industry topics.</li>
+          <li><strong>outcome</strong>: increasing outreach and education on ai in construction.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="section-title">🌟 why follow my work?</div>
+    
+    <div class="why-follow">
+      <p>
+        i'm committed to bridging the gap between traditional construction methods and modern ai. each project is an opportunity to push boundaries, learn something new, and contribute to a more efficient, intelligent construction future. my mission is to make ai accessible, impactful, and production-ready for real-world challenges.
+      </p>
+    </div>
+    
+    <div class="ascii-border">
+      <div class="ascii-art">
+       ██████╗ ██████╗ ███╗   ██╗███████╗████████╗██████╗ ██╗   ██╗ ██████╗████████╗    ████████╗██╗  ██╗███████╗
+      ██╔════╝██╔═══██╗████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║   ██║██╔════╝╚══██╔══╝    ╚══██╔══╝██║  ██║██╔════╝
+      ██║     ██║   ██║██╔██╗ ██║███████╗   ██║   ██████╔╝██║   ██║██║        ██║          ██║   ███████║█████╗  
+      ██║     ██║   ██║██║╚██╗██║╚════██║   ██║   ██╔══██╗██║   ██║██║        ██║          ██║   ██╔══██║██╔══╝  
+      ╚██████╗╚██████╔╝██║ ╚████║███████║   ██║   ██║  ██║╚██████╔╝╚██████╗   ██║          ██║   ██║  ██║███████╗
+       ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝  ╚═════╝   ╚═╝          ╚═╝   ╚═╝  ╚═╝╚══════╝
+                                                                                                                  
+      ███████╗██╗   ██╗████████╗██╗   ██╗██████╗ ███████╗                                                         
+      ██╔════╝██║   ██║╚══██╔══╝██║   ██║██╔══██╗██╔════╝                                                         
+      █████╗  ██║   ██║   ██║   ██║   ██║██████╔╝█████╗                                                           
+      ██╔══╝  ██║   ██║   ██║   ██║   ██║██╔══██╗██╔══╝                                                           
+      ██║     ╚██████╔╝   ██║   ╚██████╔╝██║  ██║███████╗                                                         
+      ╚═╝      ╚═════╝    ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝                                                         
+      </div>
+    </div>
+    
+    <div class="section-title">📌 want to know more?</div>
+    
+    <p style="text-align: center; margin-bottom: 40px; line-height: 1.8;">
+      explore my projects, share your feedback, or collaborate! ai has the potential to revolutionize construction, and we're just scratching the surface. whether you're a fellow ai enthusiast, a construction professional, or simply curious, i invite you to join the journey.
+    </p>
+    
+    <div style="text-align: center; margin-bottom: 60px;">
+      <a href="#" class="btn">contact me</a>
+      <a href="#projects" class="btn">view projects</a>
+    </div>
+    
+    <footer>
+      <p>© 2025 will hsu | constructionai | based</p>
+    </footer>
+  </div>
+  
+  <script>
+    // Create falling characters effect
+    function createFallingChars() {
+      const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+|{}[]<>?/\\";
+      const matrixBg = document.getElementById('matrix-bg');
+      const screenWidth = window.innerWidth;
+      
+      for (let i = 0; i < 100; i++) {
+        const char = document.createElement('div');
+        char.className = 'falling-chars';
+        char.style.left = `${Math.random() * screenWidth}px`;
+        char.style.animationDelay = `${Math.random() * 8}s`;
+        char.textContent = chars[Math.floor(Math.random() * chars.length)];
+        matrixBg.appendChild(char);
+      }
+    }
+    
+    // Call the function when the page loads
+    window.onload = function() {
+      createFallingChars();
+    };
+  </script>
 </body>
 </html> 
