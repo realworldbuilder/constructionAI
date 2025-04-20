@@ -10,10 +10,11 @@ A collection of open source tools that turn jobsite noise into decisions and dec
 **Voice assistant for superintendents**
 
 Turns jobsite rants into structured data. Transcribes voice notes into:
-- 📝 Daily construction reports
-- 🚧 Safety inspections
-- 🔍 Quality inspections
-- ⚠️ Contractual notices
+
+📝 Daily construction reports
+🚧 Safety inspections
+🔍 Quality inspections
+⚠️ Contractual notices
 
 [GitHub Repository](https://github.com/realworldbuilder/cowboyTalk)
 
@@ -21,8 +22,9 @@ Turns jobsite rants into structured data. Transcribes voice notes into:
 **Infinite canvas x time-axis**
 
 AI-powered construction planning & scheduling. Feels like Miro or tldraw, but built for builders with a time crunch.
-- Sync scope to sequence
-- Generate accurate timelines fast
+
+Sync scope to sequence
+Generate accurate timelines fast
 
 [GitHub Repository](https://github.com/realworldbuilder/dingplan)
 
