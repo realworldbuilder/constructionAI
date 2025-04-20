@@ -18,6 +18,7 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
+      box-sizing: border-box;
     }
     
     header {
@@ -271,13 +272,21 @@
       letter-spacing: 2px;
     }
     
-    .project-card ul {
-      padding-left: 20px;
+    .project-card .project-items {
+      padding-left: 5px;
       line-height: 1.6;
     }
     
-    .project-card li {
+    .project-card .project-item {
       margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .project-card .project-item .emoji {
+      margin-right: 10px;
+      display: inline-block;
+      min-width: 24px;
     }
     
     .project-card::before {
@@ -423,11 +432,20 @@
         font-size: 6px;
         line-height: 6px;
       }
+      
+      .container {
+        padding: 10px;
+      }
+      
+      .project-card, .focus-card {
+        padding: 20px;
+      }
     }
     
     @media screen and (max-width: 480px) {
       .hero h1 {
         font-size: 28px;
+        letter-spacing: 4px;
       }
       
       .section-title {
@@ -437,6 +455,15 @@
       .btn {
         padding: 10px 16px;
         font-size: 14px;
+        display: block;
+        margin: 10px auto;
+        max-width: 200px;
+        text-align: center;
+      }
+      
+      .hero-content .btn {
+        display: inline-block;
+        margin: 10px;
       }
     }
   </style>
@@ -478,12 +505,12 @@
         <p><strong>voice assistant for superintendents</strong></p>
         <p>turns jobsite rants into structured data.</p>
         <p>– transcribes voice notes into:</p>
-        <ul>
-          <li>📝 daily construction reports</li>
-          <li>🚧 safety inspections</li>
-          <li>🔍 quality inspections</li>
-          <li>⚠️ contractual notices</li>
-        </ul>
+        <div class="project-items">
+          <div class="project-item"><span class="emoji">📝</span> daily construction reports</div>
+          <div class="project-item"><span class="emoji">🚧</span> safety inspections</div>
+          <div class="project-item"><span class="emoji">🔍</span> quality inspections</div>
+          <div class="project-item"><span class="emoji">⚠️</span> contractual notices</div>
+        </div>
         <div style="margin-top: 15px;">
           <em>invite only</em> | <a href="https://github.com/realworldbuilder/cowboyTalk" target="_blank" style="color: #4B9CD3; text-decoration: underline;">github</a>
         </div>
@@ -492,10 +519,10 @@
         <h3>dingplan</h3>
         <p><strong>infinite canvas x time-axis</strong></p>
         <p>ai-powered construction planning & scheduling. feels like miro or tldraw, but built for builders with a time crunch.</p>
-        <ul>
-          <li>– sync scope to sequence</li>
-          <li>– generate accurate timelines fast</li>
-        </ul>
+        <div class="project-items">
+          <div class="project-item">– sync scope to sequence</div>
+          <div class="project-item">– generate accurate timelines fast</div>
+        </div>
         <div style="margin-top: 15px;">
           <em>currently in testing</em> | <a href="https://github.com/realworldbuilder/dingplan" target="_blank" style="color: #4B9CD3; text-decoration: underline;">github</a>
         </div>
