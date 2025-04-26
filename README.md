@@ -1,8 +1,8 @@
-# 🏗️ Open Source Construction AI
+# 🏗️ Construction AI
 
-> Construction taught me to love entropy. AI taught me how to automate it.
+> Construction taught me to work with chaos. AI taught me how to turn it into momentum.
 
-A collection of open source tools that turn jobsite noise into decisions and decisions into velocity.
+A collection of tools that turn jobsite noise into clarity — and clarity into speed.
 
 ## Featured Projects
 
@@ -16,6 +16,8 @@ Turns jobsite rants into structured data. Transcribes voice notes into:
 🔍 Quality inspections
 ⚠️ Contractual notices
 
+*Invite only*
+
 [GitHub Repository](https://github.com/realworldbuilder/cowboyTalk)
 
 ### 📊 Dingplan
@@ -23,18 +25,26 @@ Turns jobsite rants into structured data. Transcribes voice notes into:
 
 AI-powered construction planning & scheduling. Feels like Miro or tldraw, but built for builders with a time crunch.
 
-Sync scope to sequence
-Generate accurate timelines fast
+- Sync scope to sequence
+- Generate accurate timelines fast
+
+*Currently in testing*
 
 [GitHub Repository](https://github.com/realworldbuilder/dingplan)
 
-## About
+## Focus Areas
 
-I build AI tools for people who wake up at 5am and wrestle concrete, logistics, and chaos. 
+- **Open Source Construction AI**: Shareable models, workflows, and tools that help builders build smarter. Less dashboards, more action.
+- **AI for Superintendents**: Building voice tools and agents that actually understand the work. Turning jobsite rants into structured data that drives decisions and saves time.
+- **Planning & Execution Engines**: Scheduling logic, infinite whiteboards, and construction-focused time intelligence.
 
-Not sure where this is going. Definitely not boring.
-Tap in if you're into structure, in the structural sense.
+## Connect
+
+- [X/Twitter: @zen_kai_zen](https://x.com/zen_kai_zen)
+- [Substack: zenkaizen](https://zenkaizen.substack.com/)
+- [Instagram: @masterbuilder.ai](https://www.instagram.com/masterbuilder.ai)
+- [GitHub: @realworldbuilder](https://github.com/realworldbuilder)
 
 ## Website
 
-Visit the website at: https://realworldbuilder.github.io/constructionAI/
+Visit the website at: [https://realworldbuilder.github.io/constructionAI/](https://realworldbuilder.github.io/constructionAI/)
