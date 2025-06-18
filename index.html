@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>will hsu</title>
+  <title>MasterBuilder.ai - AI Tools for Construction</title>
   <style>
     body {
       background-color: #000;
@@ -32,7 +32,8 @@
     .logo {
       font-size: 24px;
       font-weight: bold;
-      letter-spacing: 5px;
+      letter-spacing: 3px;
+      text-transform: none;
     }
     
     nav ul {
@@ -71,7 +72,7 @@
     }
     
     .hero {
-      height: 60vh;
+      height: 70vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -82,36 +83,55 @@
     .hero-content {
       text-align: center;
       z-index: 2;
-      max-width: 800px;
+      max-width: 900px;
     }
     
     .hero h1 {
-      font-size: 48px;
+      font-size: 64px;
       margin-bottom: 20px;
-      letter-spacing: 8px;
+      letter-spacing: 4px;
+      text-transform: none;
+      font-weight: bold;
     }
     
     .hero p {
-      font-size: 18px;
-      margin-bottom: 30px;
+      font-size: 20px;
+      margin-bottom: 40px;
       line-height: 1.6;
+      text-transform: none;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .btn {
       display: inline-block;
-      padding: 12px 24px;
+      padding: 15px 30px;
       background-color: transparent;
-      border: 1px solid #4B9CD3;
+      border: 2px solid #4B9CD3;
       color: #4B9CD3;
       text-decoration: none;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       transition: all 0.3s;
       margin: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      text-transform: none;
     }
     
     .btn:hover {
       background-color: #4B9CD3;
       color: #000;
+    }
+    
+    .btn-primary {
+      background-color: #4B9CD3;
+      color: #000;
+    }
+    
+    .btn-primary:hover {
+      background-color: #7FB5DB;
+      border-color: #7FB5DB;
     }
     
     .matrix-bg {
@@ -183,10 +203,11 @@
     }
     
     .section-title {
-      font-size: 36px;
-      letter-spacing: 5px;
+      font-size: 42px;
+      letter-spacing: 3px;
       text-align: center;
-      margin: 60px 0 30px;
+      margin: 80px 0 40px;
+      text-transform: none;
     }
     
     .about-section {
@@ -274,32 +295,63 @@
       transform: translateX(100%);
     }
     
-    .projects {
+    .apps {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 30px;
-      padding: 30px 0;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 40px;
+      padding: 40px 0;
     }
     
-    .project-card {
-      border: 1px solid #4B9CD3;
-      padding: 30px;
+    .app-card {
+      border: 2px solid #4B9CD3;
+      padding: 40px;
       position: relative;
       overflow: hidden;
       transition: transform 0.3s;
+      background: rgba(75, 156, 211, 0.05);
     }
     
-    .project-card:hover {
+    .app-card:hover {
       transform: translateY(-10px);
     }
     
-    .project-card h3 {
-      font-size: 22px;
-      margin-bottom: 15px;
+    .app-card h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
       letter-spacing: 2px;
+      text-transform: none;
     }
     
-    .project-card::before {
+    .app-card .status {
+      display: inline-block;
+      padding: 6px 12px;
+      background-color: #4B9CD3;
+      color: #000;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+    
+    .app-card .status.available {
+      background-color: #28a745;
+      color: #fff;
+    }
+    
+    .app-card .status.coming-soon {
+      background-color: #ffc107;
+      color: #000;
+    }
+    
+    .app-card p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-transform: none;
+    }
+    
+    .app-card::before {
       content: "";
       position: absolute;
       top: 0;
@@ -312,8 +364,24 @@
       transform: translateX(-100%);
     }
     
-    .project-card:hover::before {
+    .app-card:hover::before {
       transform: translateX(100%);
+    }
+    
+    .app-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .app-links a {
+      color: #4B9CD3;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+    
+    .app-links a:hover {
+      color: #7FB5DB;
     }
     
     .why-follow {
@@ -400,7 +468,7 @@
     }
 
     @media screen and (max-width: 768px) {
-      .connect-links, .focus-areas, .projects {
+      .connect-links, .focus-areas, .apps {
         grid-template-columns: 1fr;
         gap: 20px;
       }
@@ -444,7 +512,7 @@
         padding: 15px;
       }
       
-      .project-card, .focus-card {
+      .app-card, .focus-card {
         padding: 25px;
         margin-bottom: 20px;
         width: 100%;
@@ -473,11 +541,11 @@
         font-size: 18px;
       }
       
-      .project-card h3, .focus-card h3 {
+      .app-card h3, .focus-card h3 {
         font-size: 24px;
       }
       
-      .project-card p, .focus-card p {
+      .app-card p, .focus-card p {
         font-size: 17px;
         line-height: 1.5;
       }
@@ -490,7 +558,7 @@
     @media screen and (max-width: 480px) {
       .hero h1 {
         font-size: 32px;
-        letter-spacing: 4px;
+        letter-spacing: 2px;
       }
       
       .section-title {
@@ -511,11 +579,11 @@
         margin: 10px;
       }
       
-      .project-card h3, .focus-card h3 {
+      .app-card h3, .focus-card h3 {
         font-size: 22px;
       }
       
-      .project-card p, .focus-card p {
+      .app-card p, .focus-card p {
         font-size: 16px;
       }
       
@@ -547,11 +615,11 @@
 <body>
   <div class="container">
     <header>
-      <div class="logo">will hsu</div>
+      <div class="logo">MasterBuilder.ai</div>
       <nav>
         <ul>
           <li><a href="#">home</a></li>
-          <li><a href="#projects">projects</a></li>
+          <li><a href="#apps">apps</a></li>
           <li><a href="#connect">connect</a></li>
         </ul>
       </nav>
@@ -560,76 +628,78 @@
     <div class="hero">
       <div class="matrix-bg" id="matrix-bg"></div>
       <div class="hero-content">
-        <h1 class="glitch glow">construction/acc</h1>
-        <p>howdy, i'm <span style="color: #7FB5DB;">will hsu</span>.
-        construction taught me to work with chaos.
-        ai taught me how to turn it into momentum.
-        now i build tools that turn jobsite noise into clarity — and clarity into speed.
-        if your project's behind, i've probably got a model to help catch it up.</p>
+        <h1 class="glitch glow">Your shortcut to construction intelligence.</h1>
+        <p>A collection of powerful AI tools designed for construction professionals. 
+        Fast, intuitive, and built to turn jobsite chaos into actionable insights. 
+        From voice-powered reporting to intelligent scheduling.</p>
         <div>
-          <a href="#projects" class="btn">explore projects</a>
-          <a href="#connect" class="btn">connect</a>
+          <a href="#apps" class="btn btn-primary">Download Apps</a>
+          <a href="#connect" class="btn">Learn More</a>
         </div>
       </div>
     </div>
     
-    <div class="section-title" id="projects">featured projects</div>
+    <div class="section-title" id="apps">Master Builder AI Apps</div>
     
-    <div class="projects">
-      <div class="project-card">
-        <h3>cowboy talk</h3>
-        <p><strong>voice assistant for superintendents</strong></p>
-        <p>turns jobsite rants into structured data. transcribes voice notes into daily construction reports, safety inspections, quality inspections, contractual notices.</p>
-        <div style="margin-top: 15px;">
-          <em>invite only</em> | <a href="https://github.com/realworldbuilder/cowboyTalk" target="_blank" style="color: #4B9CD3; text-decoration: underline;">github</a>
+    <div class="apps">
+      <div class="app-card">
+        <div class="status available">Available Now</div>
+        <h3>Cowboy Talk</h3>
+        <p><strong>Voice Assistant for Superintendents</strong></p>
+        <p>Turn jobsite conversations into structured data. Voice-powered daily reports, safety inspections, quality checks, and contractual notices. Available now on the App Store.</p>
+        <div class="app-links">
+          <a href="https://apps.apple.com/app/cowboy-talk" target="_blank">📱 App Store</a>
+          <a href="https://github.com/realworldbuilder/cowboyTalk" target="_blank">🔗 GitHub</a>
         </div>
       </div>
-      <div class="project-card">
-        <h3>dingplan</h3>
-        <p><strong>infinite canvas x time-axis</strong></p>
-        <p>ai-powered construction planning & scheduling. feels like miro or tldraw, but built for builders with a time crunch. sync scope to sequence, generate accurate timelines fast.</p>
-        <div style="margin-top: 15px;">
-          <em>currently in testing</em> | <a href="https://github.com/realworldbuilder/dingplan" target="_blank" style="color: #4B9CD3; text-decoration: underline;">github</a>
+      <div class="app-card">
+        <div class="status coming-soon">Coming Soon</div>
+        <h3>DingPlan</h3>
+        <p><strong>AI-Powered Construction Planning</strong></p>
+        <p>Infinite canvas meets intelligent scheduling. Plan like Miro, schedule like a pro. Sync scope to sequence and generate accurate timelines with AI assistance.</p>
+        <div class="app-links">
+          <a href="https://github.com/realworldbuilder/dingplan" target="_blank">🔗 GitHub</a>
+          <em>Beta testing in progress</em>
         </div>
       </div>
     </div>
     
-    <div class="section-title" id="connect">let's connect</div>
+    <div class="section-title" id="connect">Connect With Us</div>
     
     <div class="connect-links">
       <a href="https://x.com/zen_kai_zen" target="_blank" class="connect-link">
-        <span>x: @zen_kai_zen</span>
+        <span>X: @zen_kai_zen</span>
       </a>
       <a href="https://zenkaizen.substack.com/" target="_blank" class="connect-link">
-        <span>substack: zenkaizen</span>
+        <span>Substack: zenkaizen</span>
       </a>
       <a href="https://www.instagram.com/masterbuilder.ai" target="_blank" class="connect-link">
-        <span>instagram: @masterbuilder.ai</span>
+        <span>Instagram: @masterbuilder.ai</span>
       </a>
       <a href="https://github.com/realworldbuilder" target="_blank" class="connect-link">
-        <span>github: @realworldbuilder</span>
+        <span>GitHub: @realworldbuilder</span>
       </a>
     </div>
     
-    <div class="section-title">my focus areas</div>
+    <div class="section-title">Our Focus</div>
     
     <div class="focus-areas">
       <div class="focus-card">
-        <h3>open source construction ai</h3>
-        <p>shareable models, workflows, and tools that help builders build smarter. less dashboards, more action.</p>
+        <h3>Construction AI Tools</h3>
+        <p>Purpose-built AI applications that understand construction workflows. Less dashboards, more action-oriented tools that solve real problems.</p>
       </div>
       <div class="focus-card">
-        <h3>ai for superintendents</h3>
-        <p>building voice tools and agents that actually understand the work. turning jobsite rants into structured data that drives decisions and saves time.</p>
+        <h3>Voice-First Interfaces</h3>
+        <p>Building AI that speaks construction. Voice tools and agents that turn jobsite conversations into structured data and actionable insights.</p>
       </div>
       <div class="focus-card">
-        <h3>planning & execution engines</h3>
-        <p>scheduling logic, infinite whiteboards, and construction-focused time intelligence.</p>
+        <h3>Intelligent Planning</h3>
+        <p>Smart scheduling engines, visual planning tools, and construction-focused time intelligence that adapts to real-world constraints.</p>
       </div>
     </div>
     
     <footer>
-      <p>© 2025 will hsu | <a href="https://github.com/realworldbuilder/constructionAI" target="_blank" style="color: #4B9CD3; text-decoration: underline;">constructionai</a></p>
+      <p>© 2025 MasterBuilder.ai | Building the future of construction technology</p>
     </footer>
   </div>
   
