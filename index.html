@@ -1,552 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Construction AI - Building Tomorrow with Intelligence</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>will hsu — voice-first AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0f;
-            color: white;
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
+    :root {
+      --bg: #000000;
+      --surface: #0a0a0a;
+      --text: #f0f0f2;
+      --text-muted: #a1a1aa;
+      --text-dim: #63636e;
+      --accent: #e74c3c;
+      --accent-glow: rgba(231, 76, 60, 0.3);
+      --accent-bright: #ff6b5a;
+      --border: rgba(255, 255, 255, 0.06);
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+    html { scroll-behavior: smooth; }
 
-        /* Navigation */
-        nav {
-            padding: 1.5rem 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10, 10, 15, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(231, 76, 60, 0.1);
-        }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    ::selection {
+      background: var(--accent);
+      color: #fff;
+    }
 
-        .logo {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: #e74c3c;
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
+    .container {
+      max-width: 660px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
+    /* --- HERO --- */
+    .hero {
+      padding: 120px 0 80px;
+      text-align: center;
+    }
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 400;
-            transition: color 0.3s ease;
-            position: relative;
-        }
+    .hero-image-wrapper {
+      margin: 0 auto 32px;
+      width: 200px;
+    }
 
-        .nav-links a:hover {
-            color: #e74c3c;
-        }
+    .hero-image {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      filter: drop-shadow(0 0 30px var(--accent-glow)) drop-shadow(0 0 60px rgba(231, 76, 60, 0.12));
+    }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: #e74c3c;
-            transition: width 0.3s ease;
-        }
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
+    .bio {
+      color: var(--text-muted);
+      font-size: 15px;
+    }
 
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a25 100%);
-            position: relative;
-            overflow: hidden;
-        }
+    /* --- SECTIONS --- */
+    section {
+      padding: 60px 0;
+    }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('hero.png') center/cover no-repeat;
-            opacity: 0.1;
-            z-index: -1;
-        }
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
 
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
+    /* --- LINKS --- */
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
 
-        .hero-text h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #ffffff 0%, #e74c3c 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+    a:hover {
+      color: var(--accent-bright);
+      text-decoration: underline;
+    }
 
-        .hero-text .tagline {
-            font-size: 1.25rem;
-            color: #cccccc;
-            margin-bottom: 2rem;
-            font-weight: 400;
-        }
+    a.secondary {
+      color: var(--text-dim);
+      font-size: 13px;
+    }
 
-        .hero-image {
-            text-align: center;
-        }
+    a.secondary:hover {
+      color: var(--accent-bright);
+    }
 
-        .hero-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 20px;
-            box-shadow: 0 25px 50px rgba(231, 76, 60, 0.15);
-            border: 1px solid rgba(231, 76, 60, 0.2);
-        }
+    /* --- PROJECTS --- */
+    .project {
+      margin-bottom: 24px;
+      padding: 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      line-height: 1.8;
+      transition: border-color 0.2s;
+    }
 
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            font-size: 1.1rem;
-        }
+    .project:hover {
+      border-color: rgba(231, 76, 60, 0.2);
+    }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(231, 76, 60, 0.3);
-            border-color: rgba(231, 76, 60, 0.5);
-        }
+    .project-name {
+      font-weight: 600;
+      color: #ffffff;
+    }
 
-        /* Section Styles */
-        section {
-            padding: 6rem 0;
-            position: relative;
-        }
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
+    .project-link {
+      display: inline-block;
+      margin-top: 6px;
+    }
 
-        .section-header h2 {
-            font-size: 2.75rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #e74c3c;
-        }
+    /* --- FOCUS --- */
+    .focus-item {
+      margin-bottom: 20px;
+    }
 
-        .section-header p {
-            font-size: 1.2rem;
-            color: #cccccc;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+    .highlight {
+      color: #ffffff;
+      font-weight: 600;
+    }
 
-        /* What It Does Section */
-        .what-section {
-            background: rgba(231, 76, 60, 0.02);
-            border-top: 1px solid rgba(231, 76, 60, 0.1);
-            border-bottom: 1px solid rgba(231, 76, 60, 0.1);
-        }
+    .focus-item .desc {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
 
-        .what-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
+    /* --- CONNECT --- */
+    .connect-links {
+      line-height: 2.4;
+    }
 
-        .what-text h3 {
-            font-size: 2rem;
-            color: #e74c3c;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
+    .connect-links a {
+      color: var(--text);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
 
-        .what-text p {
-            font-size: 1.1rem;
-            color: #cccccc;
-            margin-bottom: 1.5rem;
-        }
+    .connect-links a:hover {
+      color: var(--accent);
+    }
 
-        .what-visual {
-            background: linear-gradient(135deg, rgba(231, 76, 60, 0.1) 0%, rgba(231, 76, 60, 0.05) 100%);
-            padding: 3rem;
-            border-radius: 20px;
-            text-align: center;
-            border: 1px solid rgba(231, 76, 60, 0.2);
-        }
+    /* --- FOOTER --- */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 0 40px;
+    }
 
-        /* Features Section */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-        }
+    footer p {
+      font-size: 13px;
+      color: var(--text-dim);
+    }
 
-        .feature-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(231, 76, 60, 0.02) 100%);
-            padding: 2.5rem;
-            border-radius: 16px;
-            border: 1px solid rgba(231, 76, 60, 0.15);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(231, 76, 60, 0.1);
-            border-color: rgba(231, 76, 60, 0.3);
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            color: #e74c3c;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .feature-card p {
-            color: #cccccc;
-            line-height: 1.7;
-        }
-
-        /* About Section */
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .about-content h3 {
-            font-size: 2rem;
-            color: #e74c3c;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-
-        .about-content p {
-            font-size: 1.1rem;
-            color: #cccccc;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: linear-gradient(135deg, rgba(231, 76, 60, 0.03) 0%, rgba(231, 76, 60, 0.01) 100%);
-            border-top: 1px solid rgba(231, 76, 60, 0.1);
-        }
-
-        .contact-content {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .contact-item {
-            text-align: center;
-        }
-
-        .contact-item h4 {
-            color: #e74c3c;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .contact-item p {
-            color: #cccccc;
-        }
-
-        .contact-item a {
-            color: #e74c3c;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-item a:hover {
-            color: #c0392b;
-        }
-
-        /* Footer */
-        footer {
-            background: #060608;
-            padding: 2rem 0;
-            text-align: center;
-            border-top: 1px solid rgba(231, 76, 60, 0.1);
-        }
-
-        footer p {
-            color: #888;
-            font-size: 0.95rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero-content,
-            .what-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
-            }
-
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-        }
-
-        /* Smooth scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #0a0a0f;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #e74c3c;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #c0392b;
-        }
-    </style>
+    /* --- RESPONSIVE --- */
+    @media (max-width: 480px) {
+      body { font-size: 14px; }
+      .hero { padding: 80px 0 60px; }
+      .hero h1 { font-size: 26px; }
+      .hero-image-wrapper { width: 160px; }
+      .project { padding: 16px; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="nav-container">
-                <a href="#" class="logo">Construction AI</a>
-                <ul class="nav-links">
-                    <li><a href="#what">What We Do</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Building Tomorrow with Intelligence</h1>
-                    <p class="tagline">Revolutionizing the construction industry through cutting-edge artificial intelligence and advanced automation technologies.</p>
-                    <a href="#what" class="cta-button">Discover More</a>
-                </div>
-                <div class="hero-image">
-                    <img src="hero.png" alt="Construction AI Technology" />
-                </div>
-            </div>
-        </div>
+  <div class="container">
+
+    <div class="hero">
+      <div class="hero-image-wrapper">
+        <img class="hero-image" src="hero.png" alt="will hsu">
+      </div>
+      <h1>will hsu</h1>
+      <p class="bio">building voice-native tools and autonomous agents.</p>
+    </div>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <a class="project-name" href="https://apps.apple.com/us/app/mind2muscle/id6749191096" target="_blank">Mind2Muscle</a>
+        <span class="project-desc"> &mdash; AI-powered fitness tracking. Workout logging meets gamification with AI coach, PR detection, Apple Health sync, and Game Center leaderboards.</span>
+        <br><a class="secondary project-link" href="https://mind2muscle.app/" target="_blank">website &nearr;</a>
+      </div>
+
+      <div class="project">
+        <a class="project-name" href="https://apps.apple.com/us/app/wristassist/id6758561450" target="_blank">WristAssist</a>
+        <span class="project-desc"> &mdash; Voice notes from your wrist. Record on Apple Watch, transcribe on iPhone. On-device speech recognition, all private, no cloud.</span>
+        <br><a class="secondary project-link" href="https://github.com/realworldbuilder/wristassist" target="_blank">github &nearr;</a>
+      </div>
+
+      <div class="project">
+        <a class="project-name" href="https://apps.apple.com/us/app/cowboy-talk/id6746420207" target="_blank">Cowboy Talk</a>
+        <span class="project-desc"> &mdash; Voice AI assistant. Speak naturally, get structured output. Turns conversations into reports, checklists, and actionable data.</span>
+        <br><a class="secondary project-link" href="https://cowboytalk.app/" target="_blank">website &nearr;</a>
+      </div>
     </section>
 
-    <!-- What It Does Section -->
-    <section id="what" class="what-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Transforming Construction</h2>
-                <p>We harness the power of artificial intelligence to solve complex challenges in the construction industry, making projects safer, faster, and more efficient.</p>
-            </div>
-            <div class="what-content">
-                <div class="what-text">
-                    <h3>AI-Powered Construction Solutions</h3>
-                    <p>Our platform combines decades of construction expertise with cutting-edge AI technology to deliver unprecedented insights and automation capabilities.</p>
-                    <p>From predictive project management to automated quality control, we're building the future of construction technology.</p>
-                    <p>By leveraging machine learning, computer vision, and advanced analytics, we help construction professionals make smarter decisions and deliver better results.</p>
-                </div>
-                <div class="what-visual">
-                    <h4 style="color: #e74c3c; font-size: 1.5rem; margin-bottom: 1rem;">Core Capabilities</h4>
-                    <p style="color: #cccccc;">🏗️ Smart Project Planning</p>
-                    <p style="color: #cccccc;">🔍 AI-Driven Quality Assurance</p>
-                    <p style="color: #cccccc;">📊 Predictive Analytics</p>
-                    <p style="color: #cccccc;">🤖 Process Automation</p>
-                    <p style="color: #cccccc;">⚡ Real-time Monitoring</p>
-                </div>
-            </div>
-        </div>
+    <section id="focus">
+      <h2>Focus</h2>
+
+      <div class="focus-item">
+        <span class="highlight">Voice-Native AI</span> &mdash; <span class="desc">Natural language as the lowest-friction interface. Systems that capture intent in motion — from workouts to worksites.</span>
+      </div>
+
+      <div class="focus-item">
+        <span class="highlight">AI Agents</span> &mdash; <span class="desc">Autonomous systems that reason, plan, and execute multi-step workflows from a single command.</span>
+      </div>
+
+      <div class="focus-item">
+        <span class="highlight">Open Source</span> &mdash; <span class="desc">Building in public. Every tool and experiment shared openly.</span>
+      </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Advanced Features</h2>
-                <p>Comprehensive AI-driven tools designed for the modern construction professional</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Smart Planning</h3>
-                    <p>AI-powered project planning that optimizes timelines, resources, and costs. Our algorithms analyze historical data and current constraints to create the most efficient project schedules.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔧</div>
-                    <h3>Predictive Maintenance</h3>
-                    <p>Anticipate equipment failures before they happen. Our machine learning models monitor equipment health and predict maintenance needs, reducing downtime and costs.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📈</div>
-                    <h3>Performance Analytics</h3>
-                    <p>Deep insights into project performance with real-time dashboards and comprehensive reporting. Track KPIs, identify bottlenecks, and optimize operations.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Safety Intelligence</h3>
-                    <p>AI-powered safety monitoring using computer vision and IoT sensors. Detect potential hazards, ensure compliance, and protect your workforce with intelligent alerts.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💡</div>
-                    <h3>Quality Assurance</h3>
-                    <p>Automated quality control through image recognition and sensor data analysis. Catch defects early, ensure standards compliance, and maintain consistent quality.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Process Automation</h3>
-                    <p>Streamline workflows with intelligent automation. From document processing to resource allocation, reduce manual work and increase efficiency across all operations.</p>
-                </div>
-            </div>
-        </div>
+    <section id="connect">
+      <h2>Connect</h2>
+      <div class="connect-links">
+        <a href="https://x.com/cowboykaizen" target="_blank">x @cowboykaizen</a><br>
+        <a href="https://zenkaizen.substack.com/" target="_blank">substack</a><br>
+        <a href="https://www.instagram.com/masterbuilder.ai" target="_blank">instagram</a><br>
+        <a href="https://github.com/realworldbuilder" target="_blank">github</a>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Construction AI</h2>
-            </div>
-            <div class="about-content">
-                <h3>Engineering the Future of Construction</h3>
-                <p>Construction AI represents the convergence of traditional construction expertise and modern artificial intelligence. Our mission is to transform how the construction industry operates, making it more efficient, safer, and more sustainable.</p>
-                <p>Built by industry professionals who understand the real challenges of construction work, our platform addresses the specific needs of contractors, project managers, and construction teams worldwide.</p>
-                <p>We believe that by combining human expertise with artificial intelligence, we can solve some of the most persistent challenges in construction while opening new possibilities for innovation and growth.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-content">
-                <div class="section-header">
-                    <h2>Get In Touch</h2>
-                    <p>Ready to revolutionize your construction projects? Let's discuss how AI can transform your operations.</p>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <h4>Email</h4>
-                        <p><a href="mailto:info@constructionai.dev">info@constructionai.dev</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>Partnership</h4>
-                        <p><a href="mailto:partners@constructionai.dev">partners@constructionai.dev</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>Support</h4>
-                        <p><a href="mailto:support@constructionai.dev">support@constructionai.dev</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Construction AI. Building the future with intelligence.</p>
-        </div>
+      <p>&copy; 2025 will hsu</p>
     </footer>
+
+  </div>
+
 </body>
 </html>
