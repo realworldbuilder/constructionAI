@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-08 17:59 UTC",
+  "lastUpdated": "2026-03-08 18:00 UTC",
   "bots": {
     "lobsterking": {
       "name": "Lobsterking \ud83e\udd9e",
@@ -21,21 +21,21 @@
           "side": "yes",
           "entry": 5,
           "currentBid": 0,
-          "held": "2m 8s"
+          "held": "2m 40s"
         },
         {
           "market": "Will the San Antonio win the 2026 Pro Ba",
           "side": "yes",
           "entry": 15,
           "currentBid": 0,
-          "held": "2m 8s"
+          "held": "2m 40s"
         },
         {
           "market": "Will the New York win the 2026 Pro Baske",
           "side": "yes",
           "entry": 5,
           "currentBid": 0,
-          "held": "2m 8s"
+          "held": "2m 40s"
         }
       ]
     },
