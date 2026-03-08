@@ -82,6 +82,11 @@
     <div class="no-data" id="chartNoData">no trades yet — bots are warming up 🔥</div>
   </div>
   
+  <div class="trades-section" id="openSection" style="display:none">
+    <h2>🔴 Open Positions</h2>
+    <div id="openTable"></div>
+  </div>
+
   <div class="trades-section">
     <h2>Recent Trades</h2>
     <div id="tradesTable">
@@ -147,6 +152,27 @@ function render(data) {
       </div>`;
   }
   
+  // open positions
+  const allOpen = [];
+  for (const [id, bot] of Object.entries(data.bots)) {
+    if (bot.openPositions) {
+      bot.openPositions.forEach(p => allOpen.push({...p, bot: bot.name}));
+    }
+  }
+  const openSection = document.getElementById('openSection');
+  const openTable = document.getElementById('openTable');
+  if (allOpen.length > 0) {
+    openSection.style.display = 'block';
+    let ohtml = '<table><tr><th>bot</th><th>market</th><th>side</th><th>entry</th><th>current bid</th><th>held</th></tr>';
+    allOpen.forEach(p => {
+      ohtml += `<tr><td>${p.bot}</td><td>${p.market || ''}</td><td>${p.side || ''}</td><td>${p.entry || ''}¢</td><td>${p.currentBid || '?'}¢</td><td>${p.held || ''}</td></tr>`;
+    });
+    ohtml += '</table>';
+    openTable.innerHTML = ohtml;
+  } else {
+    openSection.style.display = 'none';
+  }
+
   // trades table
   const allTrades = [];
   for (const [id, bot] of Object.entries(data.bots)) {
