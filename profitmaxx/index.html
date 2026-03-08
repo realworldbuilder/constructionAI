@@ -70,7 +70,7 @@
     <h1>🦞 PROFITMAXX 📈</h1>
     <div>
       <div class="updated" id="lastUpdated">loading...</div>
-      <div class="updated">kalshi paper trading</div>
+      <div class="updated" id="scanInfo">kalshi paper trading</div>
     </div>
   </div>
   
@@ -123,6 +123,7 @@ async function loadData() {
 
 function render(data) {
   document.getElementById('lastUpdated').textContent = data.lastUpdated ? 'updated: ' + data.lastUpdated : 'no data yet';
+  document.getElementById('scanInfo').textContent = `scan #${data.scanCount || 0} | ${data.openCount || 0} open positions | paper trading`;
   
   const container = document.getElementById('botCards');
   container.innerHTML = '';
@@ -163,17 +164,34 @@ function render(data) {
   const openTable = document.getElementById('openTable');
   if (allOpen.length > 0) {
     openSection.style.display = 'block';
-    let ohtml = '<table><tr><th>bot</th><th>market</th><th>side</th><th>entry</th><th>current</th><th>target</th><th>stop</th><th>unrealized</th><th>held</th></tr>';
+    let ohtml = '<table><tr><th>bot</th><th>market</th><th>side</th><th>entry</th><th>bid/ask</th><th>spread</th><th>target</th><th>stop</th><th>unrealized</th><th>progress</th><th>held</th></tr>';
     allOpen.forEach(p => {
       const cur = p.currentBid || 0;
+      const ask = p.currentAsk || 0;
       const entry = p.entry || 0;
       const target = p.target || 0;
       const stop = p.stop || 0;
+      const spread = ask - cur;
       const unrealized = p.unrealizedPnl || 0;
+      const contracts = p.contracts || 0;
       const pnlClass = unrealized > 0 ? 'green' : unrealized < 0 ? 'red' : 'neutral';
-      const pctToTarget = target > entry ? Math.round((cur - entry) / (target - entry) * 100) : 0;
-      const barColor = pctToTarget >= 50 ? '#00ff88' : pctToTarget >= 0 ? '#ffaa00' : '#ff4444';
-      ohtml += `<tr><td>${p.bot}</td><td>${p.market || ''}</td><td>${p.side || ''}</td><td>${entry}¢</td><td>${cur}¢</td><td>${target}¢</td><td>${stop}¢</td><td class="${pnlClass}">${unrealized > 0 ? '+' : ''}${(unrealized/100).toFixed(2)}</td><td>${p.held || ''}</td></tr>`;
+      // progress bar: stop = 0%, entry = middle, target = 100%
+      const range = target - stop;
+      const pct = range > 0 ? Math.max(0, Math.min(100, Math.round((cur - stop) / range * 100))) : 50;
+      const barColor = pct >= 70 ? '#00ff88' : pct >= 40 ? '#ffaa00' : '#ff4444';
+      ohtml += `<tr>
+        <td>${p.bot}</td>
+        <td>${p.market || ''}</td>
+        <td>${p.side || ''} ×${contracts}</td>
+        <td>${entry}¢</td>
+        <td>${cur}/${ask}¢</td>
+        <td>${spread}¢</td>
+        <td class="green">${target}¢</td>
+        <td class="red">${stop}¢</td>
+        <td class="${pnlClass}">${unrealized > 0 ? '+' : ''}${(unrealized/100).toFixed(2)}</td>
+        <td><div style="background:#222;border-radius:3px;height:8px;width:80px;display:inline-block;vertical-align:middle"><div style="background:${barColor};height:100%;width:${pct}%;border-radius:3px"></div></div> ${pct}%</td>
+        <td>${p.held || ''}</td>
+      </tr>`;
     });
     ohtml += '</table>';
     openTable.innerHTML = ohtml;
