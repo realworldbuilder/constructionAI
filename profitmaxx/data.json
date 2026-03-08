@@ -13,7 +13,7 @@
       "totalPnL": 0,
       "avgWin": 0,
       "avgLoss": 0,
-      "maxDrawdown": 0,
+      "maxDrawdown": 75,
       "trades": []
     },
     "clawdgross": {
