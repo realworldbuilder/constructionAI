@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-08 18:29:38 UTC",
+  "lastUpdated": "2026-03-08 18:30:17 UTC",
   "bots": {
     "lobsterking": {
       "name": "Lobsterking \ud83e\udd9e",
@@ -26,7 +26,7 @@
           "target": 89,
           "stop": 82,
           "unrealizedPnl": -10.2,
-          "held": "2m 1s"
+          "held": "2m 41s"
         },
         {
           "market": "Houston at San Antonio Winner?",
@@ -38,7 +38,7 @@
           "target": 37,
           "stop": 29,
           "unrealizedPnl": -14.7,
-          "held": "2m 1s"
+          "held": "2m 41s"
         },
         {
           "market": "Cleveland wins by over 5.5 Points?",
@@ -50,7 +50,7 @@
           "target": 5,
           "stop": 0,
           "unrealizedPnl": -6.35,
-          "held": "2m 1s"
+          "held": "2m 41s"
         },
         {
           "market": "Boston wins by over 7.5 Points?",
@@ -62,7 +62,7 @@
           "target": 74,
           "stop": 67,
           "unrealizedPnl": -8.82,
-          "held": "2m 1s"
+          "held": "2m 41s"
         },
         {
           "market": "Boston wins by over 4.5 Points?",
@@ -74,7 +74,7 @@
           "target": 83,
           "stop": 76,
           "unrealizedPnl": -11.95,
-          "held": "2m 1s"
+          "held": "2m 41s"
         },
         {
           "market": "Boston wins by over 16.5 Points?",
@@ -86,7 +86,7 @@
           "target": 44,
           "stop": 36,
           "unrealizedPnl": -20.44,
-          "held": "2m 1s"
+          "held": "2m 41s"
         },
         {
           "market": "Boston wins by over 13.5 Points?",
@@ -98,7 +98,7 @@
           "target": 54,
           "stop": 46,
           "unrealizedPnl": -20.93,
-          "held": "2m 1s"
+          "held": "2m 41s"
         },
         {
           "market": "Boston wins by over 10.5 Points?",
@@ -110,7 +110,7 @@
           "target": 65,
           "stop": 57,
           "unrealizedPnl": -20.46,
-          "held": "2m 1s"
+          "held": "2m 41s"
         },
         {
           "market": "Detroit wins by over 2.5 Points?",
@@ -122,7 +122,7 @@
           "target": 49,
           "stop": 41,
           "unrealizedPnl": -15.84,
-          "held": "2m 1s"
+          "held": "2m 41s"
         },
         {
           "market": "Detroit at Miami Winner?",
@@ -134,7 +134,7 @@
           "target": 51,
           "stop": 43,
           "unrealizedPnl": -15.9,
-          "held": "2m 1s"
+          "held": "2m 41s"
         }
       ]
     },
@@ -154,7 +154,7 @@
       "trades": []
     }
   },
-  "scanCount": 4,
+  "scanCount": 5,
   "marketsScanned": 10,
   "openCount": 10
 }
