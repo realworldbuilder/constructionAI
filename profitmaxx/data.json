@@ -1,117 +1,20 @@
 {
-  "lastUpdated": "2026-03-08 17:52 UTC",
+  "lastUpdated": "2026-03-08 17:54 UTC",
   "bots": {
     "lobsterking": {
       "name": "Lobsterking \ud83e\udd9e",
       "strategy": "V3 Maker Spread Capture",
       "status": "paper",
-      "balance": 50066,
-      "totalTrades": 12,
-      "wins": 9,
-      "losses": 3,
-      "winRate": 75,
-      "totalPnL": 66,
-      "avgWin": 11,
-      "avgLoss": -10,
-      "maxDrawdown": 12,
-      "trades": [
-        {
-          "time": "03/08 17:44",
-          "market": "[SIM] Florida vs LSU",
-          "side": "yes",
-          "entry": 78,
-          "exit": 82,
-          "pnl": 9
-        },
-        {
-          "time": "03/08 17:36",
-          "market": "[SIM] Arizona vs UCLA",
-          "side": "yes",
-          "entry": 19,
-          "exit": 23,
-          "pnl": 9
-        },
-        {
-          "time": "03/08 17:28",
-          "market": "[SIM] Michigan vs Ohio St",
-          "side": "yes",
-          "entry": 85,
-          "exit": 89,
-          "pnl": 12
-        },
-        {
-          "time": "03/08 17:20",
-          "market": "[SIM] Iowa St vs Kansas St",
-          "side": "yes",
-          "entry": 14,
-          "exit": 10,
-          "pnl": -12
-        },
-        {
-          "time": "03/08 17:12",
-          "market": "[SIM] UConn vs Marquette",
-          "side": "yes",
-          "entry": 22,
-          "exit": 26,
-          "pnl": 9
-        },
-        {
-          "time": "03/08 17:04",
-          "market": "[SIM] Purdue vs Indiana",
-          "side": "yes",
-          "entry": 91,
-          "exit": 88,
-          "pnl": -9
-        },
-        {
-          "time": "03/08 16:56",
-          "market": "[SIM] Kansas vs Baylor",
-          "side": "yes",
-          "entry": 9,
-          "exit": 14,
-          "pnl": 15
-        },
-        {
-          "time": "03/08 16:48",
-          "market": "[SIM] Houston vs Memphis",
-          "side": "yes",
-          "entry": 18,
-          "exit": 22,
-          "pnl": 9
-        },
-        {
-          "time": "03/08 16:40",
-          "market": "[SIM] Gonzaga vs St Mary's",
-          "side": "yes",
-          "entry": 88,
-          "exit": 85,
-          "pnl": -9
-        },
-        {
-          "time": "03/08 16:32",
-          "market": "[SIM] Auburn vs Alabama",
-          "side": "yes",
-          "entry": 12,
-          "exit": 16,
-          "pnl": 12
-        },
-        {
-          "time": "03/08 16:24",
-          "market": "[SIM] Kentucky vs Tennessee",
-          "side": "yes",
-          "entry": 82,
-          "exit": 86,
-          "pnl": 12
-        },
-        {
-          "time": "03/08 16:16",
-          "market": "[SIM] Duke vs UNC - Winner",
-          "side": "yes",
-          "entry": 15,
-          "exit": 19,
-          "pnl": 9
-        }
-      ]
+      "balance": 49925,
+      "totalTrades": 0,
+      "wins": 0,
+      "losses": 0,
+      "winRate": 0,
+      "totalPnL": 0,
+      "avgWin": 0,
+      "avgLoss": 0,
+      "maxDrawdown": 0,
+      "trades": []
     },
     "clawdgross": {
       "name": "Clawdgross \ud83e\udd16",
