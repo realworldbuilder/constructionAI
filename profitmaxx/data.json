@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-08 18:32:56 UTC",
+  "lastUpdated": "2026-03-08 18:33:36 UTC",
   "bots": {
     "lobsterking": {
       "name": "Lobsterking \ud83e\udd9e",
@@ -107,115 +107,115 @@
           "target": 23,
           "stop": 16,
           "unrealizedPnl": -12.05,
-          "held": "1m 58s"
+          "held": "2m 38s"
         },
         {
           "market": "Cleveland wins by over 2.5 Points?",
           "side": "yes",
           "contracts": 5,
           "entry": 8,
-          "currentBid": 7,
-          "currentAsk": 10,
+          "currentBid": 5,
+          "currentAsk": 11,
           "target": 9,
           "stop": 3,
-          "unrealizedPnl": -7.92,
-          "held": "1m 19s"
+          "unrealizedPnl": -17.31,
+          "held": "1m 58s"
         },
         {
           "market": "New York at Los Angeles L Winner?",
           "side": "yes",
           "contracts": 5,
           "entry": 39,
-          "currentBid": 0,
-          "currentAsk": 0,
+          "currentBid": 38,
+          "currentAsk": 39,
           "target": 42,
           "stop": 34,
-          "unrealizedPnl": 0,
-          "held": "0m 0s"
+          "unrealizedPnl": -15.33,
+          "held": "0m 39s"
         },
         {
           "market": "Orlando wins by over 2.5 Points?",
           "side": "yes",
           "contracts": 5,
           "entry": 60,
-          "currentBid": 0,
-          "currentAsk": 0,
+          "currentBid": 59,
+          "currentAsk": 61,
           "target": 63,
           "stop": 55,
-          "unrealizedPnl": 0,
-          "held": "0m 0s"
+          "unrealizedPnl": -15.57,
+          "held": "0m 39s"
         },
         {
           "market": "Detroit at Miami Winner?",
           "side": "yes",
           "contracts": 5,
           "entry": 53,
-          "currentBid": 0,
-          "currentAsk": 0,
+          "currentBid": 52,
+          "currentAsk": 53,
           "target": 56,
           "stop": 48,
-          "unrealizedPnl": 0,
-          "held": "0m 0s"
+          "unrealizedPnl": -15.92,
+          "held": "0m 39s"
         },
         {
           "market": "Washington at New Orleans Winner?",
           "side": "yes",
           "contracts": 5,
           "entry": 20,
-          "currentBid": 0,
-          "currentAsk": 0,
+          "currentBid": 19,
+          "currentAsk": 20,
           "target": 22,
           "stop": 15,
-          "unrealizedPnl": 0,
-          "held": "0m 0s"
+          "unrealizedPnl": -11.79,
+          "held": "0m 39s"
         },
         {
           "market": "Washington at New Orleans Winner?",
           "side": "yes",
           "contracts": 5,
           "entry": 81,
-          "currentBid": 0,
-          "currentAsk": 0,
+          "currentBid": 80,
+          "currentAsk": 81,
           "target": 83,
           "stop": 76,
-          "unrealizedPnl": 0,
-          "held": "0m 0s"
+          "unrealizedPnl": -11.95,
+          "held": "0m 39s"
         },
         {
           "market": "Indiana at Portland Winner?",
           "side": "yes",
           "contracts": 5,
           "entry": 79,
-          "currentBid": 0,
-          "currentAsk": 0,
+          "currentBid": 78,
+          "currentAsk": 79,
           "target": 81,
           "stop": 74,
-          "unrealizedPnl": 0,
-          "held": "0m 0s"
+          "unrealizedPnl": -12.46,
+          "held": "0m 39s"
         },
         {
           "market": "Indiana at Portland Winner?",
           "side": "yes",
           "contracts": 5,
           "entry": 23,
-          "currentBid": 0,
-          "currentAsk": 0,
+          "currentBid": 22,
+          "currentAsk": 23,
           "target": 25,
           "stop": 18,
-          "unrealizedPnl": 0,
-          "held": "0m 0s"
+          "unrealizedPnl": -12.56,
+          "held": "0m 39s"
         },
         {
           "market": "Dallas at Toronto Winner?",
           "side": "yes",
           "contracts": 5,
           "entry": 80,
-          "currentBid": 0,
-          "currentAsk": 0,
+          "currentBid": 79,
+          "currentAsk": 80,
           "target": 82,
           "stop": 75,
-          "unrealizedPnl": 0,
-          "held": "0m 0s"
+          "unrealizedPnl": -12.21,
+          "held": "0m 39s"
         }
       ]
     },
@@ -235,7 +235,7 @@
       "trades": []
     }
   },
-  "scanCount": 9,
+  "scanCount": 10,
   "marketsScanned": 20,
   "openCount": 10
 }
