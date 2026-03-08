@@ -1,11 +1,11 @@
 {
-  "lastUpdated": "",
+  "lastUpdated": "2026-03-08 17:49 UTC",
   "bots": {
     "lobsterking": {
-      "name": "Lobsterking 🦞",
+      "name": "Lobsterking \ud83e\udd9e",
       "strategy": "V3 Maker Spread Capture",
       "status": "paper",
-      "balance": 0,
+      "balance": 50000,
       "totalTrades": 0,
       "wins": 0,
       "losses": 0,
@@ -17,7 +17,7 @@
       "trades": []
     },
     "clawdgross": {
-      "name": "Clawdgross 🤖",
+      "name": "Clawdgross \ud83e\udd16",
       "strategy": "TBD",
       "status": "paper",
       "balance": 0,
