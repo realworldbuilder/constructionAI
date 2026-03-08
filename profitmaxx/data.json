@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-08 18:42:22 UTC",
+  "lastUpdated": "2026-03-08 18:43:02 UTC",
   "bots": {
     "lobsterking": {
       "name": "Lobsterking \ud83e\udd9e",
@@ -13,7 +13,7 @@
       "totalPnL": -438.27000000000004,
       "avgWin": 3,
       "avgLoss": -21,
-      "maxDrawdown": 2693.699999999997,
+      "maxDrawdown": 2733.269999999997,
       "trades": [
         {
           "time": "03/08 18:41",
@@ -222,48 +222,48 @@
           "side": "yes",
           "contracts": 5,
           "entry": 29,
-          "currentBid": 30,
+          "currentBid": 28,
           "currentAsk": 31,
           "target": 32,
           "stop": 24,
-          "unrealizedPnl": -4.15,
-          "held": "4m 3s"
+          "unrealizedPnl": -13.86,
+          "held": "4m 44s"
         },
         {
           "market": "Boston wins by over 1.5 Points?",
           "side": "yes",
           "contracts": 5,
           "entry": 76,
-          "currentBid": 75,
-          "currentAsk": 84,
+          "currentBid": 77,
+          "currentAsk": 81,
           "target": 78,
           "stop": 71,
-          "unrealizedPnl": -13.16,
-          "held": "4m 3s"
+          "unrealizedPnl": -2.79,
+          "held": "4m 44s"
         },
         {
           "market": "Boston wins by over 7.5 Points?",
           "side": "yes",
           "contracts": 5,
           "entry": 52,
-          "currentBid": 51,
-          "currentAsk": 54,
+          "currentBid": 54,
+          "currentAsk": 56,
           "target": 55,
           "stop": 47,
-          "unrealizedPnl": -15.93,
-          "held": "4m 3s"
+          "unrealizedPnl": -0.88,
+          "held": "4m 44s"
         },
         {
           "market": "Boston wins by over 4.5 Points?",
           "side": "yes",
           "contracts": 5,
           "entry": 66,
-          "currentBid": 66,
-          "currentAsk": 69,
+          "currentBid": 63,
+          "currentAsk": 64,
           "target": 69,
           "stop": 61,
-          "unrealizedPnl": -9.82,
-          "held": "4m 3s"
+          "unrealizedPnl": -25.12,
+          "held": "4m 44s"
         },
         {
           "market": "Houston at San Antonio Winner?",
@@ -275,19 +275,19 @@
           "target": 37,
           "stop": 29,
           "unrealizedPnl": -14.7,
-          "held": "4m 3s"
+          "held": "4m 44s"
         },
         {
           "market": "Boston wins by over 16.5 Points?",
           "side": "yes",
           "contracts": 5,
           "entry": 20,
-          "currentBid": 18,
-          "currentAsk": 22,
+          "currentBid": 19,
+          "currentAsk": 23,
           "target": 22,
           "stop": 15,
-          "unrealizedPnl": -16.57,
-          "held": "4m 3s"
+          "unrealizedPnl": -11.79,
+          "held": "4m 44s"
         },
         {
           "market": "Dallas at Toronto Winner?",
@@ -299,7 +299,7 @@
           "target": 23,
           "stop": 16,
           "unrealizedPnl": -12.05,
-          "held": "0m 40s"
+          "held": "1m 21s"
         },
         {
           "market": "Orlando wins by over 2.5 Points?",
@@ -311,7 +311,7 @@
           "target": 63,
           "stop": 55,
           "unrealizedPnl": -15.57,
-          "held": "0m 40s"
+          "held": "1m 21s"
         },
         {
           "market": "Detroit at Miami Winner?",
@@ -323,19 +323,19 @@
           "target": 51,
           "stop": 43,
           "unrealizedPnl": -15.9,
-          "held": "0m 40s"
+          "held": "1m 21s"
         },
         {
           "market": "Detroit at Miami Winner?",
           "side": "yes",
           "contracts": 5,
           "entry": 53,
-          "currentBid": 0,
-          "currentAsk": 0,
+          "currentBid": 52,
+          "currentAsk": 53,
           "target": 56,
           "stop": 48,
-          "unrealizedPnl": 0,
-          "held": "0m 0s"
+          "unrealizedPnl": -15.92,
+          "held": "0m 40s"
         }
       ]
     },
@@ -355,7 +355,7 @@
       "trades": []
     }
   },
-  "scanCount": 23,
+  "scanCount": 24,
   "marketsScanned": 35,
   "openCount": 10
 }
