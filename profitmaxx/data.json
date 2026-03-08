@@ -1,20 +1,52 @@
 {
-  "lastUpdated": "2026-03-08 18:26:44 UTC",
+  "lastUpdated": "2026-03-08 18:27:25 UTC",
   "bots": {
     "lobsterking": {
       "name": "Lobsterking \ud83e\udd9e",
       "strategy": "V3 Maker Spread Capture",
       "status": "paper",
-      "balance": 40525.93999999999,
-      "totalTrades": 26,
+      "balance": 39234.389999999985,
+      "totalTrades": 30,
       "wins": 5,
-      "losses": 21,
-      "winRate": 19,
-      "totalPnL": -244.06000000000003,
+      "losses": 25,
+      "winRate": 17,
+      "totalPnL": -295.61,
       "avgWin": 13,
-      "avgLoss": -15,
-      "maxDrawdown": 9474.060000000012,
+      "avgLoss": -14,
+      "maxDrawdown": 9525.610000000015,
       "trades": [
+        {
+          "time": "03/08 18:22",
+          "market": "Boston wins by over 13.5 Points?",
+          "side": "yes",
+          "entry": 51,
+          "exit": 50,
+          "pnl": -15.94
+        },
+        {
+          "time": "03/08 18:22",
+          "market": "Boston wins by over 16.5 Points?",
+          "side": "yes",
+          "entry": 40,
+          "exit": 40,
+          "pnl": -10.5
+        },
+        {
+          "time": "03/08 18:22",
+          "market": "Houston at San Antonio Winner?",
+          "side": "yes",
+          "entry": 34,
+          "exit": 33,
+          "pnl": -14.7
+        },
+        {
+          "time": "03/08 18:22",
+          "market": "Boston wins by over 10.5 Points?",
+          "side": "yes",
+          "entry": 61,
+          "exit": 61,
+          "pnl": -10.41
+        },
         {
           "time": "03/08 18:18",
           "market": "Boston wins by over 4.5 Points?",
@@ -226,54 +258,6 @@
       ],
       "openPositions": [
         {
-          "market": "Boston wins by over 10.5 Points?",
-          "side": "yes",
-          "contracts": 5,
-          "entry": 61,
-          "currentBid": 60,
-          "currentAsk": 63,
-          "target": 64,
-          "stop": 56,
-          "unrealizedPnl": -15.48,
-          "held": "4m 44s"
-        },
-        {
-          "market": "Houston at San Antonio Winner?",
-          "side": "yes",
-          "contracts": 5,
-          "entry": 34,
-          "currentBid": 33,
-          "currentAsk": 35,
-          "target": 37,
-          "stop": 29,
-          "unrealizedPnl": -14.7,
-          "held": "4m 44s"
-        },
-        {
-          "market": "Boston wins by over 16.5 Points?",
-          "side": "yes",
-          "contracts": 5,
-          "entry": 40,
-          "currentBid": 39,
-          "currentAsk": 42,
-          "target": 43,
-          "stop": 35,
-          "unrealizedPnl": -15.43,
-          "held": "4m 44s"
-        },
-        {
-          "market": "Boston wins by over 13.5 Points?",
-          "side": "yes",
-          "contracts": 5,
-          "entry": 51,
-          "currentBid": 50,
-          "currentAsk": 52,
-          "target": 54,
-          "stop": 46,
-          "unrealizedPnl": -15.94,
-          "held": "4m 44s"
-        },
-        {
           "market": "Detroit wins by over 2.5 Points?",
           "side": "yes",
           "contracts": 5,
@@ -283,7 +267,7 @@
           "target": 49,
           "stop": 41,
           "unrealizedPnl": -15.84,
-          "held": "4m 3s"
+          "held": "4m 44s"
         },
         {
           "market": "Charlotte at Phoenix Winner?",
@@ -295,7 +279,7 @@
           "target": 41,
           "stop": 33,
           "unrealizedPnl": -15.22,
-          "held": "4m 3s"
+          "held": "4m 44s"
         },
         {
           "market": "Cleveland wins by over 5.5 Points?",
@@ -307,7 +291,7 @@
           "target": 5,
           "stop": 0,
           "unrealizedPnl": -6.35,
-          "held": "3m 23s"
+          "held": "4m 3s"
         },
         {
           "market": "Charlotte at Phoenix Winner?",
@@ -319,7 +303,7 @@
           "target": 66,
           "stop": 58,
           "unrealizedPnl": -15.29,
-          "held": "3m 23s"
+          "held": "4m 3s"
         },
         {
           "market": "Boston at Cleveland Winner?",
@@ -331,7 +315,7 @@
           "target": 91,
           "stop": 84,
           "unrealizedPnl": -9.55,
-          "held": "2m 42s"
+          "held": "3m 23s"
         },
         {
           "market": "Cleveland wins by over 2.5 Points?",
@@ -343,7 +327,55 @@
           "target": 9,
           "stop": 3,
           "unrealizedPnl": -3.22,
-          "held": "2m 42s"
+          "held": "3m 23s"
+        },
+        {
+          "market": "Houston at San Antonio Winner?",
+          "side": "yes",
+          "contracts": 5,
+          "entry": 67,
+          "currentBid": 0,
+          "currentAsk": 0,
+          "target": 70,
+          "stop": 62,
+          "unrealizedPnl": 0,
+          "held": "0m 0s"
+        },
+        {
+          "market": "Orlando at Milwaukee Winner?",
+          "side": "yes",
+          "contracts": 5,
+          "entry": 65,
+          "currentBid": 0,
+          "currentAsk": 0,
+          "target": 68,
+          "stop": 60,
+          "unrealizedPnl": 0,
+          "held": "0m 0s"
+        },
+        {
+          "market": "Orlando at Milwaukee Winner?",
+          "side": "yes",
+          "contracts": 5,
+          "entry": 36,
+          "currentBid": 0,
+          "currentAsk": 0,
+          "target": 39,
+          "stop": 31,
+          "unrealizedPnl": 0,
+          "held": "0m 0s"
+        },
+        {
+          "market": "Dallas at Toronto Winner?",
+          "side": "yes",
+          "contracts": 5,
+          "entry": 80,
+          "currentBid": 0,
+          "currentAsk": 0,
+          "target": 82,
+          "stop": 75,
+          "unrealizedPnl": 0,
+          "held": "0m 0s"
         }
       ]
     },
@@ -363,7 +395,7 @@
       "trades": []
     }
   },
-  "scanCount": 24,
-  "marketsScanned": 36,
+  "scanCount": 25,
+  "marketsScanned": 40,
   "openCount": 10
 }
