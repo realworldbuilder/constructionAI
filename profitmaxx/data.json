@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-08 18:00 UTC",
+  "lastUpdated": "2026-03-08 18:01 UTC",
   "bots": {
     "lobsterking": {
       "name": "Lobsterking \ud83e\udd9e",
@@ -13,41 +13,41 @@
       "totalPnL": 0,
       "avgWin": 0,
       "avgLoss": 0,
-      "maxDrawdown": 0,
+      "maxDrawdown": 75,
       "trades": [],
       "openPositions": [
         {
           "market": "Will the Detroit win the 2026 Pro Basket",
           "side": "yes",
           "entry": 5,
-          "currentBid": 0,
-          "currentAsk": 0,
+          "currentBid": 4,
+          "currentAsk": 6,
           "target": 9,
           "stop": 0,
-          "unrealizedPnl": 0,
-          "held": "0m 0s"
+          "unrealizedPnl": -3,
+          "held": "0m 32s"
         },
         {
           "market": "Will the San Antonio win the 2026 Pro Ba",
           "side": "yes",
           "entry": 15,
-          "currentBid": 0,
-          "currentAsk": 0,
+          "currentBid": 14,
+          "currentAsk": 15,
           "target": 19,
           "stop": 7,
-          "unrealizedPnl": 0,
-          "held": "0m 0s"
+          "unrealizedPnl": -3,
+          "held": "0m 32s"
         },
         {
           "market": "Will the New York win the 2026 Pro Baske",
           "side": "yes",
           "entry": 5,
-          "currentBid": 0,
-          "currentAsk": 0,
+          "currentBid": 4,
+          "currentAsk": 5,
           "target": 9,
           "stop": 0,
-          "unrealizedPnl": 0,
-          "held": "0m 0s"
+          "unrealizedPnl": -3,
+          "held": "0m 32s"
         }
       ]
     },
