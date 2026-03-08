@@ -163,9 +163,17 @@ function render(data) {
   const openTable = document.getElementById('openTable');
   if (allOpen.length > 0) {
     openSection.style.display = 'block';
-    let ohtml = '<table><tr><th>bot</th><th>market</th><th>side</th><th>entry</th><th>current bid</th><th>held</th></tr>';
+    let ohtml = '<table><tr><th>bot</th><th>market</th><th>side</th><th>entry</th><th>current</th><th>target</th><th>stop</th><th>unrealized</th><th>held</th></tr>';
     allOpen.forEach(p => {
-      ohtml += `<tr><td>${p.bot}</td><td>${p.market || ''}</td><td>${p.side || ''}</td><td>${p.entry || ''}¢</td><td>${p.currentBid || '?'}¢</td><td>${p.held || ''}</td></tr>`;
+      const cur = p.currentBid || 0;
+      const entry = p.entry || 0;
+      const target = p.target || 0;
+      const stop = p.stop || 0;
+      const unrealized = p.unrealizedPnl || 0;
+      const pnlClass = unrealized > 0 ? 'green' : unrealized < 0 ? 'red' : 'neutral';
+      const pctToTarget = target > entry ? Math.round((cur - entry) / (target - entry) * 100) : 0;
+      const barColor = pctToTarget >= 50 ? '#00ff88' : pctToTarget >= 0 ? '#ffaa00' : '#ff4444';
+      ohtml += `<tr><td>${p.bot}</td><td>${p.market || ''}</td><td>${p.side || ''}</td><td>${entry}¢</td><td>${cur}¢</td><td>${target}¢</td><td>${stop}¢</td><td class="${pnlClass}">${unrealized > 0 ? '+' : ''}${(unrealized/100).toFixed(2)}</td><td>${p.held || ''}</td></tr>`;
     });
     ohtml += '</table>';
     openTable.innerHTML = ohtml;
