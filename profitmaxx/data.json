@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-08 18:20:39 UTC",
+  "lastUpdated": "2026-03-08 18:21:19 UTC",
   "bots": {
     "lobsterking": {
       "name": "Lobsterking \ud83e\udd9e",
@@ -155,7 +155,7 @@
           "target": 51,
           "stop": 43,
           "unrealizedPnl": -15.9,
-          "held": "4m 3s"
+          "held": "4m 43s"
         },
         {
           "market": "Orlando at Milwaukee Winner?",
@@ -167,7 +167,7 @@
           "target": 68,
           "stop": 60,
           "unrealizedPnl": -15.05,
-          "held": "4m 3s"
+          "held": "4m 43s"
         },
         {
           "market": "Orlando at Milwaukee Winner?",
@@ -179,7 +179,7 @@
           "target": 39,
           "stop": 31,
           "unrealizedPnl": -14.98,
-          "held": "4m 3s"
+          "held": "4m 43s"
         },
         {
           "market": "Dallas at Toronto Winner?",
@@ -191,7 +191,7 @@
           "target": 82,
           "stop": 75,
           "unrealizedPnl": -12.21,
-          "held": "4m 3s"
+          "held": "4m 43s"
         },
         {
           "market": "Dallas at Toronto Winner?",
@@ -203,7 +203,7 @@
           "target": 24,
           "stop": 17,
           "unrealizedPnl": -12.31,
-          "held": "3m 23s"
+          "held": "4m 3s"
         },
         {
           "market": "Indiana at Portland Winner?",
@@ -215,7 +215,7 @@
           "target": 81,
           "stop": 74,
           "unrealizedPnl": -12.46,
-          "held": "3m 23s"
+          "held": "4m 3s"
         },
         {
           "market": "Boston wins by over 1.5 Points?",
@@ -227,7 +227,7 @@
           "target": 90,
           "stop": 83,
           "unrealizedPnl": -9.88,
-          "held": "2m 42s"
+          "held": "3m 23s"
         },
         {
           "market": "New York wins by over 6.5 Points?",
@@ -239,7 +239,7 @@
           "target": 43,
           "stop": 35,
           "unrealizedPnl": -15.43,
-          "held": "2m 42s"
+          "held": "3m 23s"
         },
         {
           "market": "Boston wins by over 7.5 Points?",
@@ -251,7 +251,7 @@
           "target": 74,
           "stop": 67,
           "unrealizedPnl": -13.97,
-          "held": "2m 2s"
+          "held": "2m 42s"
         },
         {
           "market": "Boston wins by over 4.5 Points?",
@@ -259,11 +259,11 @@
           "contracts": 5,
           "entry": 81,
           "currentBid": 81,
-          "currentAsk": 85,
+          "currentAsk": 83,
           "target": 83,
           "stop": 76,
           "unrealizedPnl": -6.73,
-          "held": "2m 2s"
+          "held": "2m 42s"
         }
       ]
     },
@@ -283,7 +283,7 @@
       "trades": []
     }
   },
-  "scanCount": 15,
+  "scanCount": 16,
   "marketsScanned": 26,
   "openCount": 10
 }
