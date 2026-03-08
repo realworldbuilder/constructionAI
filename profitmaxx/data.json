@@ -1,20 +1,29 @@
 {
-  "lastUpdated": "2026-03-08 17:49 UTC",
+  "lastUpdated": "2026-03-08 17:51 UTC",
   "bots": {
     "lobsterking": {
       "name": "Lobsterking \ud83e\udd9e",
       "strategy": "V3 Maker Spread Capture",
       "status": "paper",
       "balance": 50000,
-      "totalTrades": 0,
-      "wins": 0,
+      "totalTrades": 1,
+      "wins": 1,
       "losses": 0,
-      "winRate": 0,
-      "totalPnL": 0,
-      "avgWin": 0,
+      "winRate": 100,
+      "totalPnL": 12,
+      "avgWin": 12,
       "avgLoss": 0,
       "maxDrawdown": 0,
-      "trades": []
+      "trades": [
+        {
+          "time": "03/08 13:50",
+          "market": "[TEST] Pipeline verification trade",
+          "side": "yes",
+          "entry": 18,
+          "exit": 22,
+          "pnl": 12
+        }
+      ]
     },
     "clawdgross": {
       "name": "Clawdgross \ud83e\udd16",
