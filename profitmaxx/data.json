@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-08 18:44:24 UTC",
+  "lastUpdated": "2026-03-08 18:45:04 UTC",
   "bots": {
     "lobsterking": {
       "name": "Lobsterking \ud83e\udd9e",
@@ -283,7 +283,7 @@
           "target": 23,
           "stop": 16,
           "unrealizedPnl": -12.05,
-          "held": "2m 42s"
+          "held": "3m 23s"
         },
         {
           "market": "Orlando wins by over 2.5 Points?",
@@ -295,7 +295,7 @@
           "target": 63,
           "stop": 55,
           "unrealizedPnl": -15.57,
-          "held": "2m 42s"
+          "held": "3m 23s"
         },
         {
           "market": "Detroit at Miami Winner?",
@@ -307,7 +307,7 @@
           "target": 51,
           "stop": 43,
           "unrealizedPnl": -15.9,
-          "held": "2m 42s"
+          "held": "3m 23s"
         },
         {
           "market": "Detroit at Miami Winner?",
@@ -319,7 +319,7 @@
           "target": 56,
           "stop": 48,
           "unrealizedPnl": -15.92,
-          "held": "2m 2s"
+          "held": "2m 42s"
         },
         {
           "market": "Cleveland wins by over 8.5 Points?",
@@ -331,7 +331,7 @@
           "target": 3,
           "stop": 0,
           "unrealizedPnl": -5.52,
-          "held": "0m 40s"
+          "held": "1m 21s"
         },
         {
           "market": "Detroit wins by over 2.5 Points?",
@@ -343,7 +343,7 @@
           "target": 49,
           "stop": 41,
           "unrealizedPnl": -15.84,
-          "held": "0m 40s"
+          "held": "1m 21s"
         },
         {
           "market": "Washington at New Orleans Winner?",
@@ -355,7 +355,7 @@
           "target": 22,
           "stop": 15,
           "unrealizedPnl": -11.79,
-          "held": "0m 40s"
+          "held": "1m 21s"
         },
         {
           "market": "Washington at New Orleans Winner?",
@@ -367,7 +367,7 @@
           "target": 83,
           "stop": 76,
           "unrealizedPnl": -11.95,
-          "held": "0m 40s"
+          "held": "1m 21s"
         },
         {
           "market": "Indiana at Portland Winner?",
@@ -379,19 +379,19 @@
           "target": 81,
           "stop": 74,
           "unrealizedPnl": -12.46,
-          "held": "0m 40s"
+          "held": "1m 21s"
         },
         {
           "market": "Indiana at Portland Winner?",
           "side": "yes",
           "contracts": 5,
           "entry": 23,
-          "currentBid": 0,
-          "currentAsk": 0,
+          "currentBid": 22,
+          "currentAsk": 23,
           "target": 25,
           "stop": 18,
-          "unrealizedPnl": 0,
-          "held": "0m 0s"
+          "unrealizedPnl": -12.56,
+          "held": "0m 40s"
         }
       ]
     },
@@ -411,7 +411,7 @@
       "trades": []
     }
   },
-  "scanCount": 26,
+  "scanCount": 27,
   "marketsScanned": 42,
   "openCount": 10
 }
