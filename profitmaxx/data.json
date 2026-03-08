@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-08 18:05:05 UTC",
+  "lastUpdated": "2026-03-08 18:05:18 UTC",
   "bots": {
     "lobsterking": {
       "name": "Lobsterking \ud83e\udd9e",
@@ -13,7 +13,7 @@
       "totalPnL": 0,
       "avgWin": 0,
       "avgLoss": 0,
-      "maxDrawdown": 475,
+      "maxDrawdown": 0,
       "trades": [],
       "openPositions": [
         {
@@ -21,120 +21,120 @@
           "side": "yes",
           "contracts": 5,
           "entry": 5,
-          "currentBid": 4,
-          "currentAsk": 6,
-          "target": 7,
+          "currentBid": 0,
+          "currentAsk": 0,
+          "target": 6,
           "stop": 0,
-          "unrealizedPnl": -5,
-          "held": "2m 40s"
+          "unrealizedPnl": 0,
+          "held": "0m 0s"
         },
         {
           "market": "Will the San Antonio win the 2026 Pro Basketball F",
           "side": "yes",
           "contracts": 5,
           "entry": 15,
-          "currentBid": 14,
-          "currentAsk": 15,
+          "currentBid": 0,
+          "currentAsk": 0,
           "target": 17,
           "stop": 10,
-          "unrealizedPnl": -5,
-          "held": "2m 40s"
+          "unrealizedPnl": 0,
+          "held": "0m 0s"
         },
         {
           "market": "Will the Oklahoma City win the 2026 Pro Basketball",
           "side": "yes",
           "contracts": 5,
           "entry": 39,
-          "currentBid": 38,
-          "currentAsk": 39,
-          "target": 41,
+          "currentBid": 0,
+          "currentAsk": 0,
+          "target": 42,
           "stop": 34,
-          "unrealizedPnl": -5,
-          "held": "2m 40s"
+          "unrealizedPnl": 0,
+          "held": "0m 0s"
         },
         {
           "market": "Will the New York win the 2026 Pro Basketball Fina",
           "side": "yes",
           "contracts": 5,
           "entry": 5,
-          "currentBid": 4,
-          "currentAsk": 5,
-          "target": 7,
+          "currentBid": 0,
+          "currentAsk": 0,
+          "target": 6,
           "stop": 0,
-          "unrealizedPnl": -5,
-          "held": "2m 40s"
+          "unrealizedPnl": 0,
+          "held": "0m 0s"
         },
         {
           "market": "Will the Minnesota win the 2026 Pro Basketball Fin",
           "side": "yes",
           "contracts": 5,
           "entry": 4,
-          "currentBid": 3,
-          "currentAsk": 4,
-          "target": 6,
+          "currentBid": 0,
+          "currentAsk": 0,
+          "target": 5,
           "stop": 0,
-          "unrealizedPnl": -5,
-          "held": "2m 40s"
+          "unrealizedPnl": 0,
+          "held": "0m 0s"
         },
         {
           "market": "Will the Los Angeles L win the 2026 Pro Basketball",
           "side": "yes",
           "contracts": 5,
           "entry": 2,
-          "currentBid": 1,
-          "currentAsk": 2,
-          "target": 4,
+          "currentBid": 0,
+          "currentAsk": 0,
+          "target": 3,
           "stop": 0,
-          "unrealizedPnl": -5,
-          "held": "2m 40s"
+          "unrealizedPnl": 0,
+          "held": "0m 0s"
         },
         {
           "market": "Will the Houston win the 2026 Pro Basketball Final",
           "side": "yes",
           "contracts": 5,
           "entry": 3,
-          "currentBid": 2,
-          "currentAsk": 3,
-          "target": 5,
+          "currentBid": 0,
+          "currentAsk": 0,
+          "target": 4,
           "stop": 0,
-          "unrealizedPnl": -5,
-          "held": "2m 40s"
+          "unrealizedPnl": 0,
+          "held": "0m 0s"
         },
         {
           "market": "Will the Denver win the 2026 Pro Basketball Finals",
           "side": "yes",
           "contracts": 5,
           "entry": 11,
-          "currentBid": 10,
-          "currentAsk": 11,
+          "currentBid": 0,
+          "currentAsk": 0,
           "target": 13,
           "stop": 6,
-          "unrealizedPnl": -5,
-          "held": "2m 40s"
+          "unrealizedPnl": 0,
+          "held": "0m 0s"
         },
         {
           "market": "Will the Cleveland win the 2026 Pro Basketball Fin",
           "side": "yes",
           "contracts": 5,
           "entry": 9,
-          "currentBid": 8,
-          "currentAsk": 9,
-          "target": 11,
+          "currentBid": 0,
+          "currentAsk": 0,
+          "target": 10,
           "stop": 4,
-          "unrealizedPnl": -5,
-          "held": "2m 40s"
+          "unrealizedPnl": 0,
+          "held": "0m 0s"
         },
         {
           "market": "Will the Charlotte win the 2026 Pro Basketball Fin",
           "side": "yes",
           "contracts": 5,
           "entry": 2,
-          "currentBid": 1,
-          "currentAsk": 2,
-          "target": 4,
+          "currentBid": 0,
+          "currentAsk": 0,
+          "target": 3,
           "stop": 0,
-          "unrealizedPnl": -5,
-          "held": "2m 40s"
+          "unrealizedPnl": 0,
+          "held": "0m 0s"
         }
       ]
     },
@@ -154,7 +154,7 @@
       "trades": []
     }
   },
-  "scanCount": 6,
+  "scanCount": 1,
   "marketsScanned": 10,
   "openCount": 10
 }
