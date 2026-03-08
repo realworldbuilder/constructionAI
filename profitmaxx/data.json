@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-08 18:09:35 UTC",
+  "lastUpdated": "2026-03-08 18:10:07 UTC",
   "bots": {
     "lobsterking": {
       "name": "Lobsterking \ud83e\udd9e",
@@ -26,7 +26,7 @@
           "target": 6,
           "stop": 0,
           "unrealizedPnl": -6.76,
-          "held": "4m 17s"
+          "held": "4m 49s"
         },
         {
           "market": "Will the San Antonio win the 2026 Pro Basketball F",
@@ -38,7 +38,7 @@
           "target": 17,
           "stop": 10,
           "unrealizedPnl": -10.33,
-          "held": "4m 17s"
+          "held": "4m 49s"
         },
         {
           "market": "Will the Oklahoma City win the 2026 Pro Basketball",
@@ -50,7 +50,7 @@
           "target": 42,
           "stop": 34,
           "unrealizedPnl": -15.33,
-          "held": "4m 17s"
+          "held": "4m 49s"
         },
         {
           "market": "Will the New York win the 2026 Pro Basketball Fina",
@@ -62,7 +62,7 @@
           "target": 6,
           "stop": 0,
           "unrealizedPnl": -6.76,
-          "held": "4m 17s"
+          "held": "4m 49s"
         },
         {
           "market": "Will the Minnesota win the 2026 Pro Basketball Fin",
@@ -74,7 +74,7 @@
           "target": 5,
           "stop": 0,
           "unrealizedPnl": -1.68,
-          "held": "4m 17s"
+          "held": "4m 49s"
         },
         {
           "market": "Will the Los Angeles L win the 2026 Pro Basketball",
@@ -86,7 +86,7 @@
           "target": 3,
           "stop": 0,
           "unrealizedPnl": -5.52,
-          "held": "4m 17s"
+          "held": "4m 49s"
         },
         {
           "market": "Will the Houston win the 2026 Pro Basketball Final",
@@ -98,7 +98,7 @@
           "target": 4,
           "stop": 0,
           "unrealizedPnl": -5.94,
-          "held": "4m 17s"
+          "held": "4m 49s"
         },
         {
           "market": "Will the Denver win the 2026 Pro Basketball Finals",
@@ -110,7 +110,7 @@
           "target": 13,
           "stop": 6,
           "unrealizedPnl": -9.01,
-          "held": "4m 17s"
+          "held": "4m 49s"
         },
         {
           "market": "Will the Cleveland win the 2026 Pro Basketball Fin",
@@ -122,7 +122,7 @@
           "target": 10,
           "stop": 4,
           "unrealizedPnl": -8.29,
-          "held": "4m 17s"
+          "held": "4m 49s"
         },
         {
           "market": "Will the Charlotte win the 2026 Pro Basketball Fin",
@@ -134,7 +134,7 @@
           "target": 3,
           "stop": 0,
           "unrealizedPnl": -5.52,
-          "held": "4m 17s"
+          "held": "4m 49s"
         }
       ]
     },
@@ -154,7 +154,7 @@
       "trades": []
     }
   },
-  "scanCount": 9,
+  "scanCount": 10,
   "marketsScanned": 10,
   "openCount": 10
 }
